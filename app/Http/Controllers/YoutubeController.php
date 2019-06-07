@@ -9,15 +9,24 @@ class YoutubeController extends Controller
 {
     public function index()
     {
-        $video = DB::selectOne('SELECT *
+
+        $video_list = DB::select(
+            'SELECT *
+            FROM `songs`
+        ');
+
+        $display = DB::selectOne('SELECT *
                             FROM `songs`
-                            WHERE `id` = ? ', ['1']);
+                            WHERE `id` = ? ', [$_GET['id']]);
 
         return view('jukebox', [
-            'video' => $video
+            'display' => $display,
+            'videos_list' => $video_list
         ]);
         
 
 
     }
+
+     
 }
