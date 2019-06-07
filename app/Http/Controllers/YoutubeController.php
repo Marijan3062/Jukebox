@@ -15,9 +15,12 @@ class YoutubeController extends Controller
             FROM `songs`
         ');
 
-        $display = DB::selectOne('SELECT *
+        $display = null;
+        if(isset( $_GET['id'] )) {
+            $display = DB::selectOne('SELECT *
                             FROM `songs`
                             WHERE `id` = ? ', [$_GET['id']]);
+        }
 
         return view('jukebox', [
             'display' => $display,
