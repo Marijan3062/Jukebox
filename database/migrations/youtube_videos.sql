@@ -40,7 +40,8 @@ CREATE TABLE `songs` (
 --
 
 INSERT INTO `songs` (`id`, `name`, `code`) VALUES
-(1, 'Afroman-Because I got high', 'WeYsTmIzjkw');
+(1, 'Afroman-Because I got high', 'WeYsTmIzjkw'),
+(2, 'GZUZ-Was Hast Du Gedacht', 'H2hGrsExuyc');
 
 --
 -- Indexes for dumped tables
