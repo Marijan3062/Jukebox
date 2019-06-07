@@ -17,3 +17,6 @@ Route::get('/', function () {
 
 Route::get('/jukebox', 'YoutubeController@index');
 
+
+Route::any('/form', "FormController@index");
+
