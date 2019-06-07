@@ -1,18 +1,26 @@
-.list{
+.list {
     background-color: grey;
     width: 560px;
     min-height: 300px;
     border: solid black 2px;
+    display: flex;
 }
 
-.list>h1{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.sammy {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+
+.list > h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
     color: white;
     margin: 40px;
 }
 
-.list>ul>li{
+.list > ul > li {
     font-family: 'Times New Roman', Times, serif;
     list-style: none;
 }
