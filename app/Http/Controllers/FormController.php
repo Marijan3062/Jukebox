@@ -11,6 +11,7 @@ class FormController extends Controller
     public function index(Request $request)
     {
         $id = $request->input('id', null);
+        
 
         if ($request->has('id')) {
             // this is editing an existing record
@@ -86,13 +87,15 @@ class FormController extends Controller
         }
  
         // prepare the edit form
-         return view('/form', [
+         $form_view = view('form', [
             'record' => $record
         ]);
  
         // put the form into the rest of the page
-        // return view('/form', [
-        //     'content' => $edit_form
-        // ]);
+        $form_content = view('index', [
+            'form' => $form_view
+        ]);
+        
+        return $form_content;
     }
 }
