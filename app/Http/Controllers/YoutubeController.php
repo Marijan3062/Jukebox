@@ -9,7 +9,7 @@ class YoutubeController extends Controller
 {
     public function index()
     {
-        $video = DB::select('SELECT *
+        $video = DB::selectOne('SELECT *
                             FROM `songs`
                             WHERE `id` = ? ', ['1']);
 
