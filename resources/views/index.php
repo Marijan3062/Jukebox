@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
+   <?= \App\Http\Services\YoutubeService::video_list();?>
       <?= $form ?>
         
         <script src="" async defer></script>

@@ -16,9 +16,14 @@
         <h1>Playlist</h1>
         <ul>
             <?php foreach($videos_list as $video) : ?>
-            <li><a href="/Day 30/public/jukebox?id=<?= $video->id ?>"><?= $video->name ?></a></li>
+            <li><a href="/index?id=<?= $video->id ?>"><?= $video->name ?></a></li>
             <?php endforeach; ?>
+
+        
+
         </ul>
     </div>
+    
+</form>
 </body>
 </html>

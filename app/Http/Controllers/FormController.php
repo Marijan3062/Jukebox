@@ -83,7 +83,7 @@ class FormController extends Controller
             Session::flash('success_message', 'OK!');
  
             // redirect to edit
-            return redirect('form?id='.$record->id);
+            return redirect('index?id='.$record->id);
         }
  
         // prepare the edit form
@@ -95,6 +95,8 @@ class FormController extends Controller
         $form_content = view('index', [
             'form' => $form_view
         ]);
+
+        \App\Http\Services\YoutubeService::video_list();
         
         return $form_content;
     }
